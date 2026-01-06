@@ -390,7 +390,7 @@ if(initial){
     
 function enableThirdParty({ enableAnalytics = true, enableAds = true, gaId = 'G-KGSZ94L6E1' } = {}) {
   if (enableAds) {
-    document.getElementById("ad").style.display = "block";
+    //document.getElementById("ad").style.display = "block";
     document.querySelectorAll('iframe[data-cookiecategory="ads"][data-src]').forEach(iframe => {
       const src = iframe.getAttribute('data-src');
       if (src) {
@@ -420,15 +420,28 @@ function disableThirdParty(){
     
 window.addEventListener('load', function(){
   window.cookieconsent.initialise({
-    palette: { popup: { background: "#ffffff", text: "#000000" }, button: { background: "#4CAF50", text: "#ffffff" } }, theme: "classic",
-    layout: "block", position: "middle",
-    content: { message: "We use cookies for analytics and ads.", dismiss: "Accept all", allow: "Allow", deny: "Reject", link: "Privacy" },
+    type: "opt-in",  
+    layout: "block",
+    position: "middle",
+    palette: {
+      popup: { background: "#ffffff", text: "#000000" },
+      button: { background: "#4CAF50", text: "#ffffff" }
+    },
+    theme: "classic",
+    content: {
+      message: "We use cookies for analytics and ads.",
+      dismiss: "Accept all",
+      allow: "Allow",
+      deny: "Reject",
+      link: "Privacy"
+    },
     onInitialise: function(status){
-      if(status == 'allow') enableThirdParty();
+      if (status === 'allow') enableThirdParty();
+      if (status === 'deny') disableThirdParty();
     },
     onStatusChange: function(status){
-      if(status == 'allow') enableThirdParty();
-      if(status == 'deny') disableThirdParty();
+      if (status === 'allow') enableThirdParty();
+      if (status === 'deny') disableThirdParty();
     }
   });
 });
