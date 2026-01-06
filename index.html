@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- SEO META -->
+<title>Random Joke Generator — Funny Jokes, Dad Jokes &amp; One‑Liners</title>
+<meta name="description" content="Generate funny jokes, dad jokes, one‑liners and humor quotes instantly. A clean, fast joke generator with share, copy and social posting features.">
+<meta name="keywords" content="jokes, funny jokes, joke generator, dad jokes, humor quotes, random jokes, joke of the day, one liners, comedy">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://jokes-generator.github.io/">
+
+<!-- OpenGraph -->
+<meta property="og:title" content="Random Joke Generator — Funny Jokes &amp; Dad Jokes">
+<meta property="og:description" content="Instantly generate funny jokes and dad jokes. Simple, fast, and shareable.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jokes-generator.github.io/">
+<meta property="og:image" content="https://jokes-generator.github.io/og-image.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Random Joke Generator — Funny Jokes">
+<meta name="twitter:description" content="Generate funny jokes instantly. Dad jokes, one‑liners, humor quotes.">
+<meta name="twitter:image" content="https://jokes-generator.github.io/og-image.jpg">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Random Joke Generator",
+  "url": "https://jokes-generator.github.io/",
+  "description": "Generate funny jokes, dad jokes, one-liners and humor quotes instantly.",
+  "applicationCategory": "EntertainmentApplication",
+  "operatingSystem": "All"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the joke generator work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The generator uses a huge database of jokes and displays them instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of jokes can I generate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can generate dad jokes, funny jokes, one-liners, humor quotes, and random jokes."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Cookies -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+<!-- PWA optional -->
+<meta name="theme-color" content="#ffffff">
+    
+<!-- FAVICON -->
+<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAch+ItAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaD9AQGg/QEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKf/gJYdIAbAG3o/wB57/8Aee//AG3o/1FzgSICoP4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAme+gYAe/D/AJP8/wCe//8Ao///AKP//wCf//8Akf7/AHnv/wme+gYAAAAAAAAAAAAAAAAAAAAAAAAAAAKf/gIAgPH/AKH//wCs//8Asf//ALX//wC1//8Asf//AK3//wCf//8AhfL/Ap/+AgAAAAAAAAAAAAAAAAAAAAAAduz/AKP//wCy//8Auf//ADmO/wBTov8AVaf/ADuP/wC7//8Asv//AKX//wB67v8AAAAAAAAAAAAAAAAAAAAAAJj//wCz//8Tv///ABtg/yDN//8czv//HM7//yDN//8AHGD/FsD//wC0//8Amv//UXOBIgAAAAAAAAAAAHDs/wCr//8Nvv//Fcn//xXQ//8N0///ENX//xDV//8R0///EdD//xjH//8QwP//AKz//wB17v8AAAAAAAAAAACE+/8As///CgAA/ycnJ/8YGRj/CAkJ/wDb//8A2///BgoM/xUWFf8nJyf/DwsO/wCy//8Ahf3/AAAAAAAAAAAAif//AJz6/xkZGf8qKyv/Kywr/yQlJP8Jbpj/BBEf/y4wLv8wMjD/MzMy/x0eHv8AlO//AIn//wAAAAAAAAAAAIP//xQMC/9RU1H/W11b/1tdW/9UVlT/DAwL/wwMC/9FR0X/RUdF/0FDQf8tLi7/ETRF/wCD//8AAAAAAAAAAAAAAAAkFxP/Jh8d/ykhHv88KSX/S9ne/1P2//9T9v//RM3U/zksKP8pIR7/Jh4c/yUZFP9Rc4EiAAAAAAAAAAAAAAAAAKP//2rs//918v//e/j//4T5//+I+f//iPn//4L5//97+P//dvj//2zt//8ApP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAu///nfr//6n6//+x+///uvz//7r8//+x+///p/r//536//8BvP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4///k/v//0/7//9r+///a/v//0/7//9f+//8Auf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3//8Az///AND//wC2//9UcYEWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAch+It//8AAPw/AADwDwAA4AcAAMADAADAAwAAgAEAAIABAACAAQAAgAEAAMADAADAAwAA4AcAAPAPAAD8PwAA//8AAA==" rel="icon" type="image/x-icon">
+
+<style>
+  :root {
+    --text:#1a1a1a;
+    --muted:#6b7280;
+    --btn:#ffffff;
+    --btn-border:#d1d5db;
+  }
+
+  body {
+    margin:0;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+    background:#f7f7f7;
+    color:var(--text);
+    overflow:hidden;
+  }
+
+  /* Background gradient spheres */
+  .bg {
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+  }
+  .sphere {
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:0.55;
+    transition:background 0.6s ease;
+  }
+
+  /* Layout */
+  .wrap {
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    text-align:center;
+  }
+
+  #joke {
+    font-size:26px;
+    line-height:1.4;
+    max-width:700px;
+    margin-bottom:20px;
+  }
+
+  #author {
+    font-size:14px;
+    color:var(--muted);
+    margin-bottom:20px;
+  }
+
+  .controls {
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  button {
+    background:var(--btn);
+    border:1px solid var(--btn-border);
+    padding:10px 16px;
+    border-radius:8px;
+    font-size:14px;
+    cursor:pointer;
+    transition:0.2s;
+  }
+  button:hover {
+    background:#f0f0f0;
+  }
+
+  .primary {
+    background:#2563eb;
+    color:white;
+    border:none;
+  }
+  .primary:hover {
+    background:#1d4ed8;
+  }
+
+  #status {
+    margin-top:12px;
+    font-size:14px;
+    color:var(--muted);
+  }
+  [role="dialog"] {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+  }
+</style>
+</head>
+
+<body>
+<section style="position:absolute; left:-9999px; top:-9999px; width:1px; height:1px; overflow:hidden;">
+  <h2>About This Joke Generator</h2>
+  <p>
+    This website provides an instant random joke generator featuring funny jokes, dad jokes, 
+    one‑liners, humor quotes, and lighthearted comedy. Every joke is fetched from trusted joke APIs 
+    and displayed in a clean, minimal interface. Users can copy jokes, share them on social media, 
+    or generate new ones with a single tap.
+  </p>
+
+  <h3>What You Can Generate</h3>
+  <ul>
+    <li>Funny jokes</li>
+    <li>Dad jokes</li>
+    <li>Short one‑liners</li>
+    <li>Humor quotes</li>
+    <li>Random joke of the day</li>
+  </ul>
+
+  <h3>Why This Site?</h3>
+  <p>
+    This site is designed to be fast, lightweight, mobile‑friendly, and easy to share. 
+    It uses modern technology and optimized code to deliver jokes instantly.
+  </p>
+</section>
+
+<div class="bg">
+  <div id="sphere1" class="sphere" style="background: rgb(99, 106, 233); top: -120px; left: -120px;"></div>
+  <div id="sphere2" class="sphere" style="background: rgb(195, 233, 99); bottom: -120px; right: -120px;"></div>
+</div>
+
+<div class="wrap">
+  <div>
+    <div id="joke">Loading Jokes...</div>
+    <div id="author"></div>
+
+    <div class="controls">
+      <button id="regenerate" class="primary" style="background: rgb(195, 233, 99);">New Joke 🔄</button>
+      <button id="copy">Copy ⿻</button>
+      <button id="shareWeb">Share 🔗</button>
+      <button id="shareX">Post on 𝕏</button>
+      <button id="shareLink">Share Link 🌐</button>
+    </div>
+
+    <div id="status"></div>
+  </div>
+</div>
+
+<script>
+/* Promo info */
+const promoUrl = 'https://jokes-generator.github.io';
+const promoName = 'Random Joke Generator';
+
+/* Joke types */
+const types = [
+  { fetcher: fetchClassicJoke },
+  { fetcher: fetchDadJoke }
+];
+
+let idx = 0;
+
+const el = {
+  joke: document.getElementById('joke'),
+  author: document.getElementById('author'),
+  status: document.getElementById('status'),
+  regenerate: document.getElementById('regenerate'),
+  copy: document.getElementById('copy'),
+  shareWeb: document.getElementById('shareWeb'),
+  shareX: document.getElementById('shareX'),
+  shareLink: document.getElementById('shareLink'),
+  sphere1: document.getElementById('sphere1'),
+  sphere2: document.getElementById('sphere2')
+};
+
+/* Fetchers */
+async function fetchClassicJoke() {
+  const res = await fetch('https://v2.jokeapi.dev/joke/Any?type=single');
+  const j = await res.json();
+  if (j.error) throw new Error(j.message || 'Classic joke API error');
+  return { text: j.joke, meta: { category: j.category } };
+}
+
+async function fetchDadJoke() {
+  const res = await fetch('https://icanhazdadjoke.com/', {
+    headers: { 'Accept': 'application/json' }
+  });
+  const j = await res.json();
+  if (!j.joke) throw new Error('Dad joke API error');
+  return { text: j.joke, meta: { id: j.id } };
+}
+
+/* Convert joke -> color */
+function hashToColor(str){
+  let hash = 0;
+  for(let i=0;i<str.length;i++){
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const h = Math.abs(hash) % 360;
+  return `hsl(${h}, 75%, 65%)`;
+}
+
+function updateBackground(joke){
+  const c1 = hashToColor(joke);
+  const c2 = hashToColor(joke.split("").reverse().join(""));
+
+  el.sphere1.style.background = c1;
+  el.sphere2.style.background = c2;
+
+  el.regenerate.style.background = c2;
+
+  el.sphere1.style.top = "-120px";
+  el.sphere1.style.left = "-120px";
+
+  el.sphere2.style.bottom = "-120px";
+  el.sphere2.style.right = "-120px";
+}
+
+/* Load joke */
+async function showNext(){
+  el.status.textContent = "";
+  el.joke.textContent = "Loading…";
+  el.author.textContent = "";
+
+  const s = types[idx % types.length];
+
+  try {
+    const { text } = await s.fetcher();
+	el.joke.textContent = text;
+    updateBackground(text);
+  } catch {
+    el.joke.textContent = "Could not load a joke.";
+    el.status.textContent = "Error fetching from API.";
+  }
+
+  idx++;
+}
+
+/* Sharing helpers */
+function makeShareText(content){
+  const promo = promoUrl ? `\n\n(From ${promoName}: ${promoUrl} 😎)` : "";
+  return content + promo;
+}
+
+/* Buttons */
+el.regenerate.addEventListener("click", showNext);
+
+el.copy.addEventListener("click", async ()=>{
+  try {
+    const text = makeShareText(el.joke.textContent);
+    await navigator.clipboard.writeText(text);
+    el.status.textContent = "Copied!";
+  } catch {
+    el.status.textContent = "Copy failed";
+  }
+});
+
+el.shareWeb.addEventListener("click", async ()=>{
+  const text = makeShareText(el.joke.textContent);
+  if(navigator.share){
+    try{
+      await navigator.share({title:"Funny Joke", text});
+      el.status.textContent = "Shared!";
+    }catch{
+      el.status.textContent = "Share cancelled";
+    }
+  } else {
+    el.status.textContent = "Sharing not supported";
+  }
+});
+
+el.shareX.addEventListener("click", ()=>{
+  const text = encodeURIComponent(makeShareText(el.joke.textContent));
+  window.open(`https://twitter.com/intent/tweet?text=${text}`, "_blank");
+});
+
+el.shareLink.addEventListener("click", ()=>{
+  const snippet = el.joke.textContent.slice(0,120);
+  const shareUrl = `${promoUrl || location.href}#j=${encodeURIComponent(snippet)}`;
+  navigator.clipboard.writeText(shareUrl)
+    .then(()=> el.status.textContent = "Link copied")
+    .catch(()=> window.open(shareUrl, "_blank"));
+});
+
+/* Init */
+function jokeFromHash(){
+  const h = location.hash;
+  if(!h) return null;
+  const m = h.match(/#j=(.*)/);
+  if(!m) return null;
+  try{
+    return decodeURIComponent(m[1]);
+  }catch{
+    return null;
+  }
+}
+
+const initial = jokeFromHash();
+if(initial){
+  el.joke.textContent = initial;
+  el.author.textContent = "";
+  updateBackground(initial);
+} else {
+  showNext();
+}
+</script>
+
+
+
+
+    
+<script>
+//document.getElementById("ad").style.display = "none";
+    
+function enableThirdParty({ enableAnalytics = true, enableAds = true, gaId = 'G-KGSZ94L6E1' } = {}) {
+  if (enableAds) {
+    document.getElementById("ad").style.display = "block";
+    document.querySelectorAll('iframe[data-cookiecategory="ads"][data-src]').forEach(iframe => {
+      const src = iframe.getAttribute('data-src');
+      if (src) {
+        iframe.setAttribute('src', src);
+        iframe.removeAttribute('data-src');
+      }
+    });
+  }
+  if (enableAnalytics && !window.__ga_enabled) {
+    window.__ga_enabled = true;
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaId);
+    s.onload = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', gaId);
+    };
+    document.head.appendChild(s);
+  }
+}
+function disableThirdParty(){
+  //...
+}
+    
+window.addEventListener('load', function(){
+  window.cookieconsent.initialise({
+    palette: { popup: { background: "#ffffff", text: "#000000" }, button: { background: "#4CAF50", text: "#ffffff" } }, theme: "classic",
+    layout: "block", position: "middle",
+    content: { message: "We use cookies for analytics and ads.", dismiss: "Accept all", allow: "Allow", deny: "Reject", link: "Privacy" },
+    onInitialise: function(status){
+      if(status == 'allow') enableThirdParty();
+    },
+    onStatusChange: function(status){
+      if(status == 'allow') enableThirdParty();
+      if(status == 'deny') disableThirdParty();
+    }
+  });
+});
+    
+function runIfConsentAllow() {
+  const name = 'cookieconsent_status=';
+  const cookies = document.cookie.split(';').map(c => c.trim());
+  const entry = cookies.find(c => c.startsWith(name));
+  if (!entry) return false;
+  const value = entry.substring(name.length).trim();
+  if (value === 'allow') {
+    if (typeof enableThirdParty === 'function') {
+      try { enableThirdParty(); } catch (e) { console.error('enableThirdParty error:', e); }
+    } else {
+      console.warn('enableThirdParty is not defined');
+    }
+    return true;
+  }
+  return false;
+}
+</script>
+    
+
+
+</body></html>
